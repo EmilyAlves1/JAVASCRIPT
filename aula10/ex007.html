@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando numeros</title>
+
+    
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Comfortaa:wght@300..700&family=Explora&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oooh+Baby&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poiret+One&family=Quicksand:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+        /*.google-sans-code-<uniquifier> {
+            font-family: "Google Sans Code", monospace;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+            }*/
+       
+            html, body {
+            min-height: 100vh;
+            margin: 0;
+            background-image: url('imagens/32942458_429118195718.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center ;
+            font: "Google Sans Code", monospace;
+            color: #fff;
+
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+        }
+
+        input{
+            font: normal 18pt arial;
+            width: 100px;
+        }
+
+
+        div#res{
+            margin-top: 20px;
+            width: 400px;
+        }
+      .buton{
+        margin: 10px;
+        font-family: "Google Sans Code", monospace;
+        font-size: 1em;
+        background-color: rgb(184, 39, 172);
+        border: none;
+        border-radius: 10px;
+      }
+
+      #res{
+        font-size: 2em;
+      }
+
+        section{
+            background-color: transparent;
+            border: solid 1px #fff;
+            backdrop-filter: blur(20px);
+            border-radius: 10px;
+            width: 400px;
+            height: 300px;
+            text-align: center;
+            padding: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Somando valores</h1>
+        <input type="number" name="txtn1" id="txtn1" class="caixa"> +
+        <input type="number" name="txtn2" id="txtn2" class="caixa">
+        <input type="button" value="Somar" onclick="somar()" class="buton">
+        <div id="res">Resultado</div>
+    </section>
+
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
+
+        }    
+        
+    </script>
+</body>
+</html>
